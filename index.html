@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Kofi Gideo Ebedaowei</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="nav-bar">
+            <div class="nav-bar-right-section">
+                <p>KOFI GIDEON</p>
+            </div>
+            <div class="nav-bar-left-section">
+                <span>Home</span>
+                <span>Projects</span>
+                <span>Contact</span>
+                <i class="fa-regular fa-sun"></i>
+                <span id="toggle-dark"><i class="fa-solid fa-toggle-off"></i></span>
+                <span id="toggle-light" style="display: none;"><i class="fa-solid fa-toggle-on"></i></span>
+                <i class="fa-regular fa-moon"></i>
+                <span>Hire me <i class="fa-solid fa-arrow-right-to-city"></i></span>
+            </div>
+            <!-- Hamburger Icon (Visible on small screens) -->
+            <span id="hamburger" class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </span>
+        </div>
+        
+        <!-- Sliding Panel -->
+        <div id="slide-panel" class="slide-panel closed">
+            <span id="close-panel" class="close-panel"><i class="fa-solid fa-xmark"></i></span>
+            <div class="panel-content">
+                <span>Home</span>
+                <span>Projects</span>
+                <span>Contact</span>
+                <span>Hire me <i class="fa-solid fa-arrow-right-to-city"></i></span>
+                <!-- Add Dark/Light Mode Toggle in the panel -->
+                <div class="mode-toggle">
+                    <span id="toggle-dark-mobile">
+<i class="fa-regular fa-sun"></i>
+<i class="fa-solid fa-toggle-off"></i> Light Mode</span>
+<span id="toggle-light-mobile" style="display: none;">
+    <i class="fa-regular fa-moon"></i>
+    <i class="fa-solid fa-toggle-on">
+                    </i> Dark Mode</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Overlay (Appears when panel is open) -->
+        <div id="overlay" class="overlay"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

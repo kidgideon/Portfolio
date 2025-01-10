@@ -1,0 +1,140 @@
+body {
+    transition: background-color 0.3s, color 0.3s;
+    background-color: white;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.page-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body.dark-mode {
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-bar {
+    width: 95%;
+    position: fixed;
+    padding: 0px 15px;
+    top: 10px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 30px;
+    box-shadow: 0 0 15px 5px rgba(128, 0, 128, 0.8); /* Purple glow effect */
+    background: linear-gradient(135deg, rgba(128, 0, 128, 0.5), rgba(0, 0, 128, 0.5)); /* Glowing dark purple */
+    z-index: 10; /* Keeps navbar on top */
+}
+
+.nav-bar-right-section {
+    font-weight: bold;
+}
+
+.nav-bar-left-section {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-bar-left-section span {
+    cursor: pointer;
+}
+
+#hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+#slide-panel {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Initially hidden off-screen */
+    width: 300px;
+    height: 100%;
+    background-color: black;
+    color: white;
+    transition: right 0.3s ease-in-out, visibility 0s 0.3s; /* Smooth sliding and visibility delay */
+    z-index: 15;
+    padding: 20px;
+}
+
+#slide-panel.open {
+    right: 0; /* Slide the panel in */
+    visibility: visible; /* Make the panel visible */
+    transition: right 0.3s ease-in-out, visibility 0s; /* No delay for visibility */
+}
+
+#slide-panel.closed {
+    visibility: hidden; /* Hide the panel */
+}
+
+#slide-panel .panel-content span {
+    display: block;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+#slide-panel .mode-toggle {
+    margin-top: 30px;
+}
+
+#overlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 5;
+}
+
+#close-panel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-bar-left-section {
+        display: none; /* Hide the menu items on small screens */
+    }
+    
+
+    .nav-bar {
+        width: 87%;
+        top: 15px;
+    }
+
+    #hamburger {
+        display: block; /* Show the hamburger icon */
+    }
+    
+    .mode-toggle {
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+.page-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+}
