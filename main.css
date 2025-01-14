@@ -3,8 +3,13 @@ body {
     background-color: white;
     color: black;
     font-family: 'Roboto', sans-serif;
+    padding-top: 100PX;
 }
 
+h1 {
+    margin: 0px;
+    text-align: center;
+}
 
 .page-container {
     width: 100%;
@@ -19,23 +24,22 @@ body.dark-mode {
     color: white;
     font-family: 'Roboto', sans-serif;
 }
-
 .nav-bar {
     width: 95%;
     position: fixed;
     padding: 0px 15px;
     top: 10px;
-    background-color: black;
+    background-color: black; /* Ensures a solid fallback color */
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
     border-radius: 30px;
-    box-shadow: 0 0 15px 5px rgba(128, 0, 128, 0.8); /* Purple glow effect */
-    background: linear-gradient(135deg, rgba(128, 0, 128, 0.5), rgba(0, 0, 128, 0.5)); /* Glowing dark purple */
-    z-index: 10; /* Keeps navbar on top */
+    /* Solid purple gradient */
+    z-index: 999; /* Keeps navbar on top */
 }
+
 
 .nav-bar-right-section {
     font-weight: bold;
@@ -66,7 +70,7 @@ body.dark-mode {
     background-color: black;
     color: white;
     transition: right 0.3s ease-in-out, visibility 0s 0.3s; /* Smooth sliding and visibility delay */
-    z-index: 15;
+    z-index: 1000;
     padding: 20px;
 }
 
@@ -108,6 +112,50 @@ body.dark-mode {
     cursor: pointer;
 }
 
+    .developer-introduction-div{
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: row;
+         gap: 10px;
+    }
+
+    .first-area{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;   
+    }
+
+    .second-area {
+         width: 40%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: row; 
+         background-color: black;
+         border-radius: 10px;
+    }
+
+    .second-area img {
+        margin-top: -30%;
+    }
+
+    .contact-links {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .contact-links span i {
+        font-size: 30px;
+    }
+
 @media (max-width: 768px) {
     .nav-bar-left-section {
         display: none; /* Hide the menu items on small screens */
@@ -137,4 +185,43 @@ body.dark-mode {
     flex-direction: column;
 }
 
+.developer-introduction-div {
+    flex-direction: column;
+    width: 90%;
+}
+
+.first-area{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;   
+}
+
+.first-area p {
+    text-align: center;
+}
+
+.contact-links {
+    align-items: center;
+}
+.second-area {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: row; 
+}
+
+.second-area img {
+    margin-top: -50%;
+}
+
+h1 {
+    font-size: 160%;
+}
+
+h2 {
+    font-size: 130%;
+}
 }
